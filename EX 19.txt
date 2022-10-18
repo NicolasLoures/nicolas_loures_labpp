@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+//exercicio 19
+int main()
+{
+
+    float mcub;
+    float lit;
+
+    printf("Digite um volume em litros , para ser convertido em metros cubicos(m^3) : \n");
+    scanf("%f", &lit);
+    mcub = lit/1000;
+    printf("O volume em metros cubicos(m^3) eh %f", mcub);
+    return 0;
+}
