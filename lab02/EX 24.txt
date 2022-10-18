@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Exercicio 24
+int main()
+{
+    float mq;
+    float acres;
+
+    printf("Digite um valor de area em metros quadrados(m^2) para ser convertido em acres: \n");
+    scanf("%f", &mq);
+    acres = mq*0.000247;
+    printf("O valor de area, em acres, eh %f", acres);
+    return 0;
+}

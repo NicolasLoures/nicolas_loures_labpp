@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Exercicio 26
+int main()
+{
+    float mq;
+    float hect;
+
+    printf("Digite um valor de area metros quadrados(m^2) para ser convertido em hectares: \n");
+    scanf("%f", &mq);
+    hect = mq*0.0001;
+    printf("O valor de area, em hectares, eh %f", hect);
+    return 0;
+}

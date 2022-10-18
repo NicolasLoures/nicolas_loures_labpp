@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Exercicio 23
+int main()
+{
+    float Jardas;
+    float metros;
+
+    printf("Digite um valor de comprimento em metros para ser convertido em jardas: \n");
+    scanf("%f", &metros);
+    Jardas = metros/0.91;
+    printf("O valor de comprimento, em jardas eh, %f", Jardas);
+    return 0;
+}

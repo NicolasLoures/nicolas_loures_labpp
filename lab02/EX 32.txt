@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+//Exercicio 32
+
+int main()
+{
+    int x;
+    int soma;
+
+    printf("Digite um numero inteiro: \n");
+    scanf("%d", &x);
+
+    soma = (x * 3 + 1) + ( x * 2 - 1);
+
+    printf("a soma do sucessor de seu triplo com o antecessor de seu dobro eh %d", soma);
+
+
+    return 0;
+}

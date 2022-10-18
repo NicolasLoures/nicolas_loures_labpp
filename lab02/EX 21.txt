@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+//exercicio 21
+int main()
+{
+
+    float kg;
+    float lib;
+
+    printf("Digite um valor de massa em libra , para ser convertido em quilogramas : \n");
+    scanf("%f", &lib);
+    kg = lib * 0.45;
+    printf("O valor da massa em quilogramas) eh %f", kg);
+    return 0;
+}

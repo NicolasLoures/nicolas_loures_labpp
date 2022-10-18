@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Exercicio 28
+int main()
+{
+    float x;
+    float y;
+    float z;
+    float soma;
+    printf("Digite 3 valores: \n");
+    scanf("%f %f %f", &x, &y, &z);
+    soma = (x*x) + (y*y) + (z*z);
+    printf("O valor do resultado da soma dos quadrados dos tres valores eh %f", soma);
+    return 0;
+}

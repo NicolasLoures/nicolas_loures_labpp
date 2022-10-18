@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+//Exercicio 30
+
+int main()
+{
+    float real;
+    float dolar;
+    float cota;
+
+    printf("Digite um valor em real e a cotação do dolar: \n");
+    scanf("%f %f", &real, &cota);
+    dolar = real  / cota;
+
+    printf("O valor correspondente em dolares eh %f", dolar);
+
+    return 0;
+
+
+
+
+}
