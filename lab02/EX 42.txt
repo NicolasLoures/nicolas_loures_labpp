@@ -1,0 +1,21 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+//exercicio 42
+int main()
+{
+    float salario;
+    float grat;
+    float imp;
+    float novo;
+
+
+    printf("Digite o salario base do funcionario: \n");
+    scanf("%f", &salario);
+    imp =  salario * 0.07;
+    grat = salario * 0.05;
+    novo = (salario + grat) - imp;
+    printf("O salario a receber eh R$ %.2f", novo);
+    return 0;
+}

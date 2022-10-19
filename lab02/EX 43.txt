@@ -1,0 +1,29 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+//exercicio 43
+int main()
+{
+    float valor;
+    float desconto;
+    float parcela;
+    float comissao1;
+    float comissao2;
+
+
+    printf("Digite o valor total de venda: \n");
+    scanf("%f", &valor);
+    desconto  = valor - ( valor * 0.1);
+    parcela = valor / 3;
+
+    comissao1 = desconto * 0.05;
+    comissao2 = valor * 0.05;
+
+    printf("O total a pagar com desconto eh R$ %.2f \n", desconto);
+    printf("O valor de cada parcela, no parcelamento de 3x sem juros, eh R$ %.2f \n", parcela);
+
+    printf("O valor da comissao em caso de venda a vista, com desconto, eh de R$ %.2f \n", comissao1);
+     printf("O valor da comissao em caso de parcelamento eh de R$ %.2f \n", comissao2);
+    return 0;
+}

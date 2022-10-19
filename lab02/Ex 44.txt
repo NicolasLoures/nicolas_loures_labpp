@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+//exercicio 44
+int main()
+{
+    float degrau;
+    float altura;
+    float quant;
+
+
+
+    printf("Digite a altura do degrau em centimetros e a altura que voce deseja alcancar em metros: \n");
+    scanf("%f %f", &degrau, &altura);
+
+    quant = (altura*100) / degrau ;
+
+
+
+
+    printf("Para alcancar a altura desejada voce deve subir %.2f degraus \n", quant);
+
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+//exercicio 47
+int main()
+{
+    int num;
+    int x;
+    int y;
+    int z;
+    int v;
+    printf("Escreva um numero inteiro de 4 digitos: ");
+    scanf("%d", &num);
+    x= num%10;
+    y= ((num%100)-x)/10;
+    z= (((num%1000)-x)-y)/100;
+    v= ((((num)-x)-y)-z)/1000;
+    printf("%d\n%d\n%d\n%d", v, z, y, x);
+    return 0;
+}

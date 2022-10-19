@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+
+//exercicio49
+
+int main()
+{
+    int horasIn;
+    int minIn;
+    int segIn;
+    int tempo;
+
+    printf("Escreva momento do inicio do experimento\nHoras:");
+    scanf("%d", &horasIn);
+    printf("Minutos: ");
+    scanf("%d", &segIn);
+    printf("Segundos: ");
+    scanf("%d", &segIn);
+    printf("Escreva o tempo de duracao do experimento em s: ");
+    scanf("%d", &tempo);
+
+    int horas;
+    int minutos;
+    int segundos;
+    horas= (tempo/3600);
+    minutos= ((tempo-(horas*3600))/60);
+    segundos= (tempo-((horas*3600)+(minutos*60)));
+
+    int horasFim;
+    int minFim;
+    int segFim;
+    horasFim= horasIn + horas;
+    minFim= minIn + minutos;
+    segFim= segIn + segundos;
+
+    printf("O experimento se encerrara as: %d horas %d minutos %d segundos", horasFim, minFim, segFim);
+    return 0;
+}

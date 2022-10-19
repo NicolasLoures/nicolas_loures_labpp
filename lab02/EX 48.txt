@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+//exercicio 48
+int main()
+{
+    int segundos;
+    int minutos;
+    int horas;
+    int tempo;
+    printf("Escreva tempo em segundos: ");
+    scanf("%d", &tempo);
+    horas= (tempo/3600);
+    minutos= ((tempo-(horas*3600))/60);
+    segundos= (tempo-((horas*3600)+(minutos*60)));
+    printf("%d horas, %d minutos e %d segundos", horas, minutos, segundos);
+    return 0;
+}

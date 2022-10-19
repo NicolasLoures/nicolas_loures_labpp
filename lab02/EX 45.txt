@@ -1,0 +1,14 @@
+#include <stdio.h>
+//exercicio 45
+int main()
+{
+    char mai;
+    char min;
+
+
+    printf("Escreva uma letra maiuscula: ");
+    scanf("%c", &mai);
+    min = mai + 32;
+    printf("A forma minuscula dessa letra eh: %c\n", min);
+    return 0;
+}

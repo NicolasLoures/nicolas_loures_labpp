@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+//exercicio 52
+
+int main()
+{
+    //valor a ser recebida por cada amigo
+    float ami1;
+    float ami2;
+    float ami3;
+    //valor apostado por cada amigo
+    float v1;
+    float v2;
+    float v3;
+    //valor do premio
+    float p;
+    printf("Digite o valor da premiacao: ");
+    scanf("%f", &p);
+    printf("Digite o valor que o primeiro amigo investiu: ");
+        scanf("%f", &v1);
+    printf("Escreva o valor que o segundo amigo investiu: ");
+        scanf("%f", &v2);
+    printf("Escreva o valor que o segundo amigo investiu: ");
+        scanf("%f", &v3);
+    printf("O valor que o primeiro receba eh de: R$ %.2f\n", ami1=(p/(v1+v2+v3))*v1);
+    printf("O valor que o primeiro receba eh de: R$ %.2f\n", ami2=(p/(v1+v2+v3))*v2);
+    printf("O valor que o primeiro receba eh de: R$ %.2f\n", ami3=(p/(v1+v2+v3))*v3);
+    return 0;
+}
