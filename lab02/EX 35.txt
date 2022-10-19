@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 35
+
+int main()
+{
+
+    float ca;
+    float cb;
+    float hip;
+
+    printf("Digite o valor dos catetos: \n");
+    scanf("%f %f", &ca, &cb);
+
+    hip = sqrt(ca*ca + cb * cb);
+
+
+    printf("A hipotenusa do triangulo eh %.2f", hip);
+
+
+
+
+    return 0;
+}

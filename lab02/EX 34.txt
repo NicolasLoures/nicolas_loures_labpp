@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 34
+
+int main()
+{
+    const float PI = 3.141592;
+    float raio;
+    float area;
+    printf("Digite o valor do raio do circulo: \n");
+    scanf("%f", &raio);
+    area = PI * (raio * raio);
+
+    printf("A area desse circulo eh %.2f", area);
+
+
+
+
+    return 0;
+}

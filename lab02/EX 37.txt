@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 37
+
+int main()
+{
+
+    float valor;
+    float desconto;
+
+    printf("Digite o valor do produto eh: \n");
+    scanf("%f", &valor);
+
+
+
+
+    printf("o valor do produto com desconto de 12 eh  %.2f", valor = valor - (0.12 * valor));
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+const float PI = 3.141592;
+//exercicio 36
+
+int main()
+{
+
+    float h;
+    float r;
+    float v;
+
+    printf("Digite o valor da altura e do raio do cilindro circular eh: \n");
+    scanf("%f %f", &h, &r);
+
+    v = PI * (r * r) * h;
+
+
+    printf("o volume do cilindro circular %.2f", v);
+
+
+
+
+    return 0;
+}

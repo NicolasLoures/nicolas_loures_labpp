@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 38
+
+int main()
+{
+
+    float salario;
+    float novo;
+
+    printf("Digite o valor do salario atual eh: \n");
+    scanf("%f", &salario);
+    novo = salario + (0.25 * salario);
+
+
+
+
+    printf("o valor do salario sera  %.2f", novo);
+
+
+
+    return 0;
+}

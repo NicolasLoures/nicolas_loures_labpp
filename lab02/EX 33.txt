@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 33
+
+int main()
+{
+    float lado;
+
+    printf("Digite o valor do lado do quadrado: \n");
+    scanf("%f", &lado);
+
+    printf("A area desse quadrado eh %.2f metros quadrados", lado * lado);
+
+
+
+
+    return 0;
+}
