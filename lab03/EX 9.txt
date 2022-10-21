@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 9
+
+int main()
+{
+    float s1, prest, cond;
+
+    printf("Digite o salario e o valor da prestacao: ");
+    scanf("%f %f", &s1, &prest);
+    cond = (s1 * 0.2);
+
+
+    if (prest > cond) {
+
+        printf("Emprestimo nao concedido");
+    }
+    else
+    {
+
+        printf("Emprestimo concedido");
+
+    }
+
+
+
+
+    return 0;
+}

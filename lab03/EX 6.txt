@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 6
+
+int main()
+{
+    int x;
+    int y;
+    int dif;
+    int dif2;
+
+    printf("Digite dois numeros: \n");
+    scanf("%d %d", &x, &y);
+    dif = x - y;
+    dif2 = y -x;
+
+    if (x > y){
+
+
+        printf("%d eh maior que %d e a diferenca entre eles eh %d", x, y, dif);
+
+    }
+    else
+    {
+        printf("%d eh maior que %d e a diferenca entre eles eh %d", y, x, dif2);
+    }
+
+
+
+
+    return 0;
+}

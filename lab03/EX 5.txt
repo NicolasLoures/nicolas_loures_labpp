@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 5
+
+int main()
+{
+    int x;
+    int par;
+
+
+    printf("Digite um numero: \n");
+    scanf("%d", &x);
+    par = x%2;
+
+
+    if (!par){
+
+
+        printf("O numero digitado eh par");
+
+    }
+    else
+    {
+        printf("O numero eh impar");
+    }
+
+
+
+
+    return 0;
+}

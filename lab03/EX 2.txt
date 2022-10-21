@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//exercicio 2
+
+int main()
+{
+    float x, raiz;
+
+    printf("Digite um numero: ");
+    scanf("%f", &x);
+
+    if (x > 0){
+        raiz = sqrt(x);
+        printf("A raiz quadrada de x eh %.4f", raiz);
+    }
+    else
+    {
+        if (x < 0){
+        printf("Por ser um numero menor que zero, eh invalido o calculo da raiz quadrada");
+        }
+    }
+
+
+
+
+    return 0;
+}
