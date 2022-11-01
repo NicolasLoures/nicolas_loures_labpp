@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <math.h>
+
+
+//18. Faça um programa que mostre ao usuário um menu com 4 opções de operações
+//matemáticas (as básicas, por exemplo). O usuário escolhe uma das opções e o seu programa
+//então pede dois valores numéricos e realiza a operação, mostrando o resultado e saindo
+
+
+int main()
+{
+    char op;
+    float num1, num2, soma, subt, multi, divisao;
+
+
+    printf("X================================================X\n");
+    printf("X==============Menu de Operacoes=================X\n");
+    printf("SOMA - DIGITE 1 \nSUBTRACAO - DIGITE 2 \nMULTIPLICACAO - DIGITE 3 \nDIVISAO - DIGITE 4 \n");
+    printf("Operacao escolhida: \n");
+    scanf(" %c", &op);
+    printf("X================================================X\n");
+
+
+
+
+
+
+    if (op == '1')
+        {
+            printf("OPERACAO ESCOLHIDA: SOMA\n");
+            printf("Digite dois valores numericos a serem somados: \n");
+            scanf("%f %f", &num1, &num2);
+            soma = num1 + num2;
+            printf("A soma de %.2f com %.2f eh %.2f \n", num1, num2, soma);
+
+
+
+
+        }else
+            {
+                if (op == '2'){
+                    printf("OPERACAO ESCOLHIDA: SUBTRACAO\n");
+                    printf("Digite dois valores numericos a serem subtraidos: \n");
+                    scanf("%f %f", &num1, &num2);
+                    subt = num1 - num2;
+                    printf("A subtracao de %.2f por %.2f eh %.2f \n", num1, num2, subt);
+
+
+
+
+
+
+                }else
+            {
+               if (op == '3'){
+                printf("OPERACAO ESCOLHIDA: MULTIPLICACAO\n");
+                printf("Digite dois valores numericos a serem multiplicados: \n");
+                scanf("%f %f", &num1, &num2);
+                multi = num1 * num2;
+                printf("A multiplicacao de %.2f por %.2f eh %.2f \n", num1, num2, multi);
+
+
+
+            }else
+            {
+                if(op == '4')
+                {
+                    printf("OPERACAO ESCOLHIDA: DIVISAO\n");
+                    printf("Digite o dividendo : \n");
+                    scanf("%f", &num1);
+                    printf("Digite o divisor: \n");
+                    scanf("%f", &num2);
+                    divisao = num1 / num2;
+                    printf("A divisao de %.2f por %.2f eh %.2f \n", num1, num2, divisao);
+                }
+
+
+               }
+            }
+            }
+
+
+
+return 0;
+}

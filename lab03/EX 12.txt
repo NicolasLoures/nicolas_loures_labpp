@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <math.h>
+
+
+//12. Ler um número inteiro. Se o número lido for negativo, escreva a mensagem “Número
+//inválido”. Se o número for positivo, calcular o logaritmo deste número
+
+int main()
+{
+    int x;
+    float logX;
+
+    printf("Digite um numero inteiro maior que zero: \n");
+    scanf("%d", &x);
+
+
+    if (x > 0){
+        logX = log(x);
+
+        printf("Log de %d eh %f", x, logX);
+    }else{
+        printf("Numero invalido");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}

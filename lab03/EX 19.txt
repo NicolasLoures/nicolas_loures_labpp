@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <math.h>
+
+
+//19. Faça um programa para verificar se um determinado número inteiro e divisível por 3 ou 5,
+//mas, não simultaneamente pelos dois
+
+
+int main()
+{
+    int num1, cond3, cond5;
+
+    printf("Digite um numero inteiro divisivel por 3 ou 5, mas nao pelos dois: \n");
+    scanf("%d", &num1);
+
+    cond3 = num1 % 3;
+    cond5 = num1 % 5;
+
+    if ((cond3 == 0) && (cond5 == 0)){
+            printf("%d eh divisivel por 3 e por 5", num1);
+    }else{
+        if (cond3 == 0){
+            printf("%d eh divisivel por 3, mas nao por 5", num1);
+
+
+        }else{
+            if (cond5 == 0){
+                printf("%d eh divisivel por 5, mas nao por 3", num1);
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+    }
+
+return 0;
+}

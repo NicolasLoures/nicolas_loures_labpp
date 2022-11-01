@@ -1,0 +1,81 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <stdbool.h>
+
+
+//20.1. Escreva o menu de opções abaixo. Leia a opção do usuário e execute a operação escolhida.
+//Escreva uma mensagem de erro se a opção for inválida.
+//Escolha a opção:
+//1- Soma de 2 números.
+//2- Diferença entre 2 números (maior pelo menor).
+//3- Produto entre 2 números.
+//4- Divisão entre 2 números (o denominador não pode ser zero).
+//Opção
+
+
+
+
+int main()
+{
+    int op;
+    float n1, n2, soma, sub, sub2, mul, div;
+
+
+
+    printf("Escolha a opcao: \n");
+    printf("1 - Soma de 2 numeros\n");
+    printf("2 - Diferenca entre 2 numeros(maior pelo menor\n");
+    printf("3 - Produto entre 2 numeros\n");
+    printf("4 - Divisao entre 2 numeros(Denominador nao pode ser zero)\n");
+    printf("Opcao: \n");
+    scanf("%d", &op);
+     if ((op != 1) && (op!= 2) && (op!= 3) && (op!= 4)){
+
+        printf("Opcao selecionada invalida!\n");
+        exit(0);
+    }
+
+    printf("Digite dois numeros: \n");
+    scanf("%f %f", &n1, &n2);
+
+    soma = n1 + n2;
+    sub = n1 - n2;
+    sub2 = n2 - n1;
+    mul = n1 * n2;
+    div = n1 / n2;
+
+    if ((op == 1)){
+        printf("A soma de %.2f e %.2f eh %.2f\n", n1, n2, soma);
+
+    }
+    if ((op == 2)){
+        if(n1 >= n2){
+            printf("A subtracao do maior pelo menor eh %.2f\n", sub);
+        }else{
+            if(n2>n1){
+                printf("A subtracao do maior pelo menor eh %.2f\n", sub2);
+
+            }
+
+        }
+
+    }
+    if (op == 3){
+        printf("A multiplicacao entre %.2f e %.2f eh %.2f\n", n1, n2, mul);
+    }
+    if (op == 4){
+        if ((n2 == 0) ){
+            printf("O denominador nao pode ser zero!\n");
+
+        }else{
+            printf("A divisao entre %.2f e %.2f eh %.2f", n1, n1, div);
+        }
+
+    }
+
+
+
+
+
+return 0;
+}

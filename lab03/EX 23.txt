@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <stdbool.h>
+
+
+//23 23. Determine se um determinado ano lido é bissexto. Sendo que um ano é bissexto se for
+//divisível por 400 ou se for divisível por 4 e não for divisível por 100. Por exemplo: 1988, 1992,
+//1996.
+
+
+
+
+int main()
+{
+    int ano, tempo;
+
+    printf("Digite um ano para verificar se eh bissexto: \n");
+    scanf("%d", &ano);
+
+    if ((ano % 400 == 0) || (ano % 4 == 0) && (ano % 100 != 0)){
+
+        printf("O ano digitado eh um ano bissexto");
+    }else{
+            printf("O ano digitado nao eh um ano bissexto");
+
+        }
+
+
+
+
+
+return 0;
+}

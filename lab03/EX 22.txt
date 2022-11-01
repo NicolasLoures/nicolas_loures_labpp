@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <stdbool.h>
+
+
+//22 Leia a idade e o tempo de serviço de um trabalhador e escreva se ele pode ou não se
+//aposentar. As condições para aposentadoria são
+// Ter pelo menos 65 anos;
+// Ou ter trabalhado pelo menos 30 anos;
+// Ou ter pelo menos 60 anos e trabalhado pelo menos 25 anos
+
+
+
+
+int main()
+{
+    int idade, tempo;
+    bool cond1, cond2, cond3;
+
+    printf("Digite a idade do trabalhador: \n");
+    scanf("%d", &idade);
+    printf("Digite o tempo de servico do trabalhador: \n");
+    scanf("%d", &tempo);
+
+    cond1 = idade >= 65;
+    cond2 = tempo >= 30;
+    cond3 = idade >= 60 && tempo >= 25;
+
+    if ((cond1 == 1) || (cond2 == 1) || (cond3 == 1)){
+
+        printf("O trabalhador pode se aposentar");
+    }else{
+        if((cond1 == 0) && (cond2 == 0) && (cond3 == 0)){
+            printf("O trabalhador nao pode se aposentar");
+
+        }
+    }
+
+
+
+
+return 0;
+}

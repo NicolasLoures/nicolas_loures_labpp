@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <stdbool.h>
+
+
+//20. Dados três valores, A, B, C, verificar se eles podem ser valores dos lados de um triangulo e,
+//se forem, se é um triângulo escaleno, equilátero ou isósceles, considerando os seguintes
+//conceitos:
+// * O comprimento de cada lado de um triângulo é menor do que a soma dos outros dois
+//lados;
+//* Chama-se equilátero o triângulo que tem três lados iguais;
+//* Denominam-se isósceles o triângulo que tem o comprimento de dois lados iguais;
+//* Recebe o nome de escaleno o triângulo que tem os três lados diferentes;
+
+
+
+int main()
+{
+    float valA, valB, valC, somaAB, somaBC, somaAC;
+    bool condA, condB, condC;
+    printf("Digite tres valores para verficar se podem ser valorres do lado de um triangulo: \n");
+    scanf("%f %f %f", &valA, &valB, &valC);
+
+    somaAB = valA + valB;
+    somaBC = valB + valC;
+    somaAC = valA + valC;
+
+    condA = somaBC > valA;
+    condB = somaAC > valB;
+    condC = somaAB > valC;
+
+
+
+
+
+    if ((condA == 1) && (condB == 1) && (condC == 1)){
+            printf("Os valores podem ser de lados de um triangulo\n");
+            if ((valA == valB) && (valB == valC)){
+                printf("De acordo com os valores digitados, eh um triangulo equilatero\n");
+            }
+            if((valA != valB) && (valB != valC)){
+                printf("De acordo com os valores digitados eh um triangulo escaleno");
+
+            }
+            if((valA == valB) && (valB != valC) || (valB == valC) && (valC != valA) || (valA == valC) && (valC != valB)){
+                printf("De acordo com os valores digitados eh um trianqgulo isosceles");
+            }
+
+
+            }else{
+                printf("Os valores digitados nao podem ser de lados de um triangulo");
+
+    }
+
+return 0;
+}
