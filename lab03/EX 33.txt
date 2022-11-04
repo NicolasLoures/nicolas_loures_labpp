@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main (){
+    float precoI, precoF;
+
+    printf("Digite o preco atual para receber o preco novo(Ex: 2.00 (reais)): \n");
+    scanf("%f", &precoI);
+    if(precoI < 50){
+        precoF = precoI * 1.05;
+            if(precoF < 80){
+                    printf("O novo preco sera de R$ %.2f, e esta barato", precoF);
+                    exit(0);
+            }
+    }else{
+        if((precoI >= 50) && (precoI <= 100)){
+        precoF = precoI * 1.10;
+            if(precoF < 80){
+                    printf("O novo preco sera de R$ %.2f, e esta barato", precoF);
+                    exit(0);
+            }else{
+                if((precoF >= 80) && (precoF <= 120)){
+                    printf("O novo preco sera de R$ %.2f, e esta normal", precoF);
+                    exit(0);
+            }
+
+            }
+
+    }else{
+        if(precoI > 100){
+        precoF = precoI * 1.15;
+            if(precoF > 120 && precoF <= 200){
+                    printf("O novo preco sera de R$ %.2f, e esta caro", precoF);
+                    exit(0);
+            }else{
+                if(precoF > 200){
+                printf("O novo preco sera de R$ %.2f, e esta muito caro!", precoF);
+                exit(0);
+            }
+
+            }
+
+        }
+        }
+
+    }
+
+    return 0;
+    }
+

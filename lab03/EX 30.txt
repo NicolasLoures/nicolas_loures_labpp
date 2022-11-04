@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main (){
+    float num1, num2, num3;
+
+    printf("Digite o primeiro numero a fazer uma comparacao: \n");
+    scanf("%f", &num1);
+    printf("Digite o segundo numero a fazer uma comparacao: \n");
+    scanf("%f", &num2);
+    printf("Digite o terceiro numero a fazer uma comparacao: \n");
+    scanf("%f", &num3);
+
+
+    if ((num1 > num2) && (num2 > num3)){
+        printf("A ordem de numeros eh: \n%.2f\n%.2f\n%.2f", num3, num2, num1);
+        exit(0);
+    }else{
+        if ((num1 > num3) && (num3 > num2)){
+            printf("A ordem de numeros eh: \n%.2f\n%.2f\n%.2f", num2, num3, num1);
+            exit(0);
+
+        }if((num2 > num1) && (num1 > num3)){
+            printf("A ordem de numeros eh: \n%.2f\n%.2f\n%.2f", num3, num2, num1);
+            exit(0);
+
+        }else{
+            if((num2 > num3) && (num3 > num1)){
+                printf("A ordem de numeros eh: \n%.2f\n%.2f\n%.2f", num1, num3, num2);
+                exit(0);
+
+            }else{
+                if((num3 > num2) && (num2 > num1)){
+                    printf("A ordem de numeros eh: \n%.2f\n%.2f\n%.2f", num1, num2, num3);
+                    exit(0);
+                }else{
+                    if((num3 > num1) && (num1 > num2)){
+                         printf("A ordem crescente de numeros eh: \n%.2f\n%.2f\n%.2f", num2, num1, num3);
+                        exit(0);
+                    }else{
+                        if((num1 == num2) || (num1 == num3) || (num2 == num3)){
+                            printf("Os valores digitados devem ser diferentes entre si!");
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+}

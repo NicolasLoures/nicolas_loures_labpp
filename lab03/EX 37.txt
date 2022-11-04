@@ -1,0 +1,102 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int enthora, entmin, saihora, saimin;
+    int reshora, resmin;
+    float preco;
+
+    printf("Escreva o horario de entrada:\n");
+    scanf("%d%d", &enthora, &entmin);
+    printf("Escreva o horario de saida:\n");
+    scanf("%d%d", &saihora, &saimin);
+
+    if (enthora <= saihora && entmin <= saimin){
+        reshora = saihora - enthora;
+        resmin = -(entmin - saimin);
+        printf("1-O horario eh: %.2d:%.2d\n", reshora, entmin);
+    }
+
+    if ((enthora < saihora) && (entmin > saimin)){
+        reshora = saihora - enthora - 1;
+        resmin = 60 + (saimin - entmin);
+        printf("2-O horario eh: %.2d:%.2d\n", reshora, resmin);
+    }
+
+    if (enthora > saihora && entmin > saimin){
+        reshora = (saihora + 24) - enthora - 1;
+        resmin = entmin - saimin;
+        printf("3-O horario eh: %.2d:%.2d\n", reshora, resmin);
+    }
+
+    if (enthora > saihora && entmin < saimin){
+        reshora = (saihora + 24) - enthora;
+        resmin = saimin - entmin;
+        printf("4-O horario eh: %.2d:%.2d\n", reshora, resmin);
+    }
+
+    if (reshora <= 1){
+        if (resmin == 0){
+            preco = reshora * 1;
+            printf("Preco a ser pago: %.2f\n", preco);
+        }
+        if (resmin > 0){
+            preco = (reshora + 1)* 1;
+            printf("Preco a ser pago: %.2f\n", preco);
+        }
+    system ("pause");
+    return 0;
+    }
+
+    if (reshora == 2){
+        if (resmin == 0){
+        preco = reshora * 1;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+        if (resmin > 0){
+        preco = (reshora + 1)* 1.4;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+    system ("pause");
+    return 0;
+    }
+
+    if (reshora == 3){
+        if (resmin == 0){
+        preco = reshora * 1.4;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+        if (resmin > 0){
+        preco = (reshora + 1)* 1.4;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+    system ("pause");
+    return 0;
+    }
+
+    if (reshora == 4){
+        if (resmin == 0){
+        preco = reshora * 1.4;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+        if (resmin > 0){
+        preco = (reshora + 1)* 2;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+    system ("pause");
+    return 0;
+    }
+
+    if (reshora == 5){
+        if (resmin == 0){
+        preco = reshora * 2;
+        printf("Preco a ser pago: %.2f\n", preco);
+        }
+    system ("pause");
+    return 0;
+    }
+
+  return 0;
+}

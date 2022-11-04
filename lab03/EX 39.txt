@@ -1,0 +1,133 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    float salario, salario_novo;
+    int tempo;
+
+    printf("Escreva o tempo de servico:\n");
+    scanf("%d", &tempo);
+    printf("Escreva o salario:\n");
+    scanf("%f", &salario);
+
+    if (tempo < 1){
+        if (salario <500){
+        salario_novo = salario * 1.25;
+        printf("O novo salario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 500 && salario < 1000){
+        salario_novo = salario * 1.20;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1000 && salario < 1500){
+        salario_novo = salario * 1.15;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1500 && salario < 2000){
+        salario_novo = salario * 1.10;
+        printf("O novo salario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 2000){
+        salario_novo = salario;
+        printf("O novo salario eh: %.2f\n", salario_novo);
+        }
+    }
+
+    if (tempo >= 1 && tempo <= 3){
+        if (salario <500){
+        salario_novo = (salario * 1.25) + 100;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 500 && salario < 1000){
+        salario_novo = (salario * 1.20) + 100;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1000 && salario < 1500){
+        salario_novo = (salario * 1.15) + 100;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1500 && salario < 2000){
+        salario_novo = (salario * 1.10) + 100;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 2000){
+        salario_novo = salario + 100;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+    }
+
+    if (tempo >= 4 && tempo <= 6){
+        if (salario <500){
+        salario_novo = (salario * 1.25) + 200;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 500 && salario < 1000){
+        salario_novo = (salario * 1.20) + 200;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1000 && salario < 1500){
+        salario_novo = (salario * 1.15) + 200;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1500 && salario < 2000){
+        salario_novo = (salario * 1.10) + 200;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 2000){
+        salario_novo = salario + 200;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+    }
+
+    if (tempo >= 7 && tempo <= 10){
+        if (salario <500){
+        salario_novo = (salario * 1.25) + 300;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 500 && salario < 1000){
+        salario_novo = (salario * 1.20) + 300;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1000 && salario < 1500){
+        salario_novo = (salario * 1.15) + 300;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1500 && salario < 2000){
+        salario_novo = (salario * 1.10) + 300;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 2000){
+        salario_novo = salario + 300;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+    }
+
+    if (tempo > 10){
+        if (salario <500){
+        salario_novo = (salario * 1.25) + 500;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 500 && salario < 1000){
+        salario_novo = (salario * 1.20) + 500;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1000 && salario < 1500){
+        salario_novo = (salario * 1.15) + 500;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 1500 && salario < 2000){
+        salario_novo = (salario * 1.10) + 500;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+        if (salario >= 2000){
+        salario_novo = salario + 500;
+        printf("O novo slario eh: %.2f\n", salario_novo);
+        }
+    }
+
+
+    system ("pause");
+    return 0;
+}

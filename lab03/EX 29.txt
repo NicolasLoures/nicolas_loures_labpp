@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    srand(time(NULL));
+    int i = 0, acertos = 0;
+    float a, b, soma, resp;
+
+    printf("Prova de matematica: dois numeros aleatorios entre 0 e 100 irao aparecer, digite a soma entre eles!\n");
+    while (i < 5){
+            a = (rand() % 100) + 1;
+            b = (rand() % 100) + 1;
+            soma = a + b;
+            printf("Qual a soma entre %.0f e %.0f? \n", a, b);
+            scanf("%f", &resp);
+            if (soma == resp){
+                printf("Voce acertou! A resposta era %.0f\n", soma);
+                acertos = acertos + 1;
+                printf("Seus acertos: %d\n", acertos);
+
+
+            }else{
+                if(soma != resp){
+                    printf("Voce errou! A respota era %.0f\n", soma);
+                    printf("Seus acertos: %d\n", acertos);
+
+                }
+
+            }
+
+            i = i + 1;
+
+
+
+
+    }
+    printf("Finalizado!\n");
+    printf("Seus acertos foram: %d", acertos);
+
+
+return 0;
+}
