@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+/*7. Faça um programa que leia 10 inteiros positivos, ignorando não positivos, e imprima sua 
+média.
+*/
+
+
+int main()
+{   
+   int valor,contadorLoop=1,somas=0,contador=0;
+   for(contadorLoop;contadorLoop<=10;contadorLoop++){
+      printf("Digite um valor(%d/10): ",contadorLoop);
+      scanf("%d",&valor);
+      if(val>=0){
+         somas+=valor;
+         contador++;
+      }
+      else{
+         printf("Valor negativo, sera desconsiderado\n");
+      }
+      
+   }
+   printf("A media dos valore digitados eh: %d",somas/contador);
+   return 0;
+}

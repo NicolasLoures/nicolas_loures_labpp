@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+/*8. Escreva um programa que leia 10 números e escreva o menor valor lido e o maior valor lido
+*/
+
+int main()
+{   
+   int valor,contador=1,maior,menor;
+   for(contador;contador<=10;contador++){
+      printf("Digite um valor(%d/10): ", contador);
+      scanf("%d",&valor);
+      if(contador==1){
+         maior =valor;
+         menor =valor;
+      }
+      else if(valor>maior){
+         maior = valor;
+      }
+      else if(valor<menor){
+         menor = valor;
+      }
+      
+   }
+   printf("O maior valor digitado eh: %d\nE o menor valor digitado eh: %d",maior,menor);
+   return 0;
+}

@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*4. Escreva um programa que declare um inteiro, inicialize-o com 0, e incremente-o de 1000 em 
+1000, imprimindo seu valor na tela, até que seu valor seja 100.000 (cem mil).
+*/
+
+int main(){
+	int contador=0;
+	for(contador;contador<=100000;contador+=1000){
+		printf("%d\n",contador);
+	}
+return 0 ;
+}

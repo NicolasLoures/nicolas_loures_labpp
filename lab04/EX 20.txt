@@ -1,0 +1,29 @@
+#include <stdio.h>
+/*20. Faça um programa que calcule a soma de todos os números primos abaixo de dois milhões.
+*/
+
+
+int main()
+{
+    int numero, a, soma, teste;
+    teste = 0;
+    soma = 2;
+    
+    for (numero=1; numero<=2000000; numero+=2){
+        for (a=1; a<=numero; a++){
+            if (numero%a==0){
+                teste++;
+            }
+        }
+        if (teste==2){
+            soma += numero;
+            printf("%d eh primo\n", numero);
+        }
+
+        teste = 0;
+    }
+    
+    printf("A soma dos numeros primos abaixo de dois milhoes eh: %d", soma);
+
+    return 0;
+}

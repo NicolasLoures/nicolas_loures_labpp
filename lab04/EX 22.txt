@@ -1,0 +1,37 @@
+/*22. Faça um programa que calcule o maior número palíndromo feito a partir do produto de dois 
+números de 3 dígitos. Ex.: O maior palíndromo feito a partir do produto de dois números de dois 
+dígitos é 9009 = 91*99.
+*/
+#include <stdio.h>
+
+int main()
+{
+    int numero1, numero2, produto1, produto2, mp, mn1, mn2, unidade, dezena, centena, milhar, dmilhar, cmilhar;
+
+    mp = 0;
+
+    for (numero1=999; numero1>=100; numero1--){
+        for (numero2=999; numero2>=100; numero2--){
+            produto1 = numero1*numero2;
+            
+            unidade = produto1/100000;
+            dezena = ((produto1/10000) - (unidade*10))*10;
+            centena = ((produto1/1000) - (unidade*100) - (dezena))*100;
+            milhar = ((produto1/100) - (unidade*1000) - (dezena*10) - (centena/10))*1000;
+            dmilhar = ((produto1/10) - (unidade*10000) - (dezena*100) - (centena) - (milhar/100))*10000;
+            cmilhar = ((produto1) - (unidade*100000) - (dezena*1000) - (centena*10) - (milhar/10) - (dmilhar/1000))*100000;
+            
+            produto2 = unidade + dezena + centena + milhar + dmilhar + cmilhar;
+            
+            if ((produto1 == produto2) && (produto1 > mp)){
+                mp = produto1;
+                mn1 = num1;
+                mn2 = num2;
+            }
+        }
+    }
+
+    printf("%d*%d = %d que eh o maior palindromo formado a partir do produto de dois numeros de 3 digitos.", mn1, mn2, mp);
+    
+    return 0;
+}

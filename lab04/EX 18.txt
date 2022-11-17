@@ -1,0 +1,26 @@
+#include <stdio.h>
+/*18. Um funcionário recebe aumento anual. Em 1995 foi contratado por 2000 reais. Em 1996 
+recebeu aumento de 1.5%. A partir de 1997, os aumentos sempre correspondem ao dobro do 
+ano anterior. Faça programa que determine o salário atual do funcionário
+*/
+
+int main()
+{
+    float salarioi, salarioAtual, aumento1, aumento;
+    int ano, ano_final;
+
+    salarioi = 2000;
+    aumento1 = 15.0/100;
+    salarioAtual = salarioi + aumento1*salarioi;
+    aumento = ( aumento1*salarioi)*2;
+    ano_final = 2022;
+    
+    for (ano=1997; ano<ano_final; ano++){
+        salarioAtual = salarioAtual + aumento;
+        aumento *= 2;
+    }
+
+    printf("Em %d o salario do funcionario eh R% %.2f.", ano, salarioAtual);
+
+    return 0;
+}
