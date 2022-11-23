@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*14. Faça uma função que receba a distância em Km e a quantidade de litros de gasolina
+consumidos por um carro em um percurso, calcule o consumo em Km/l e escreva uma
+mensagem de acordo com a tabela abaixo:
+CONSUMO (Km/l) MENSAGEM
+menor que 8 Venda o carro!
+entre 8 e 14 Econômico!
+maior que 14 Super econômico!
+*/
+
+void consumo(float distancia, float litros);
+int main(void)
+{
+    float dist, litr;
+
+    printf("Digite a distancia em quilometros: \n");
+    scanf("%f", &dist);
+    printf("Digite a quantidade de litros de gasolina consumidos para a distancia do percurso, em litros: \n");
+    scanf("%f", &litr);
+
+    consumo(dist, litr);
+
+
+    return 0;
+}
+
+void consumo(float distancia, float litros){
+    float kml;
+    kml = distancia/litros;
+    if(kml<8){
+             printf("Venda o carro");
+
+    }if(kml>=8&&kml<=14){
+         printf("Economico");
+
+    }if(kml>14){
+        printf("Super economico");
+    }
+}
+
+
+
+
+

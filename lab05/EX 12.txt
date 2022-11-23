@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*12. Escreva uma função que receba um número inteiro maior do que zero e retorne a soma de
+todos os seus algarismos. Por exemplo, ao número 251 corresponderá o valor 8 (2 + 5 + 1).
+Se o número lido não for maior do que zero, o programa terminará com a mensagem
+“Número inválido”.*/
+
+
+void soma(int num);
+int main(void)
+{
+    int num;
+    printf("Digite um  numero: \n");
+    scanf("%d",&num);
+    soma(num);
+
+    return 0;
+}
+
+void soma(int num){
+    int i=1;
+    int l =0;
+    int soma =0;
+   while (num/i){
+    i*=10;
+    l++;
+   }
+   if (num < 0){
+       printf("Numero invalido!");
+       exit(0);
+
+   }
+   i=1;
+   for(int j=1;j<=l;j++){
+    soma += (num%(i*10))/i;
+    i*=10;
+   }
+   printf("A soma dos algarismos: %d",soma);
+}

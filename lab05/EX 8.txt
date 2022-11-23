@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*8. Sejam a e b os catetos de um triangulo, onde a hipotenusa é obtida pela equação:
+hipotenusa = sqrt(a*a + b*b) Faça uma função que receba os valores de a e b e calcule o valor
+da hipotenusa através da equação
+
+*/
+
+void hip(float catetoA, float catetoB);
+int main(void){
+    float catetoA, catetoB;
+    printf("Digite o valor de um cateto do triangulo para verificar qual eh sua hipotenusa: \n");
+    scanf("%f", &catetoA);
+    printf("Digite o valor do outro cateto do triangulo para verificar qual eh sua hipotenusa: \n");
+    scanf("%f", &catetoB);
+    hip(catetoA, catetoB);
+
+}
+void hip(float catetoA, float catetoB){
+
+    float hipotenusa;
+    hipotenusa = sqrt(pow(catetoA, 2) + pow(catetoB, 2));
+    printf("O valor da hipotenusa eh %.2f", hipotenusa);
+}

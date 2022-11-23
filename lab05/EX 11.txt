@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*11. Elabore uma função que receba três notas de um aluno como parâmetros e uma letra. Se a
+letra for A, a função deverá calcular a média aritmética das notas do aluno; se for P, deverá
+calcular a média ponderada, com pesos 5, 3 e 2.*/
+
+
+void notas(float n1, float n2, float n3, char letra);
+
+int main(void)
+{
+    float n1, n2, n3;
+    char letra;
+
+    printf("Digite a primeira nota: \n");
+    scanf("%f", &n1);
+    printf("Digite a segunda nota: \n");
+    scanf("%f", &n2);
+    printf("Digite a terceira nota: \n");
+    scanf("%f", &n3);
+    printf("Insira a letra, A para media aritmetica ou P para media ponderada (com pesos 5, 3 e 2, respectivamente as notas inseridas): \n");
+    scanf(" %c", &letra);
+
+    notas(n1, n2, n3, letra);
+  return 0;
+}
+
+void notas(float n1, float n2, float n3, char letra){
+    float mediaA, mediaP;
+    mediaA = (n1 + n2 + n3) / 3;
+    mediaP = ((n1 * 5) + (n2 * 3) + (n3 * 2)) / 10;
+    if (letra == 'A' || letra == 'a'){
+        printf("A media aritmetica entre as tres notas inseridas eh %.2f", mediaA);
+    }else{
+        if(letra == 'P' || letra == 'p'){
+            printf("A media ponderada entre as tres notas inseridas eh %.2f", mediaP);
+        }else{
+            if ((letra != 'A' || letra != 'a') && (letra != 'P' || letra != 'p')){
+                printf("Letra inserida invalida!");
+                exit(0);
+            }
+
+        }
+    }
+
+}
+
+
+

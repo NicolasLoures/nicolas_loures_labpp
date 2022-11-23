@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*6. Faça uma função que receba 3 números inteiros como parâmetro, representando horas,
+minutos e segundos, e os converta em segundos..
+*/
+
+void conversor(int hora, int min, int seg);
+int main(void){
+    int hora, min, seg;
+    printf("Digite as horas: \n");
+    scanf("%d", &hora);
+     printf("Digite os minutos: \n");
+    scanf("%d", &min);
+     printf("Digite os segundos: \n");
+    scanf("%d", &seg);
+    conversor(hora, min, seg);
+
+
+}
+void conversor(int hora, int min, int seg){
+    int res;
+    res = (hora * 3600) + (min * 60) + seg;
+    printf("%d segundos.", res);
+}

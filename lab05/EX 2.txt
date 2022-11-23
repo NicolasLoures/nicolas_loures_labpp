@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*2. Faça uma função que receba a data atual (dia, mês e ano em inteiro) e exiba-a na tela no
+formato textual por extenso. Ex.: Data: 18/11/2022, Imprimir: 18 de novembro de 2022.
+*/
+
+int dataAtual(int dia, int mes, int ano);
+int main(void)
+{
+    int dia, mes, ano, r;
+    printf("Dia: \n");
+    scanf("%i", &dia);
+
+    printf("Mes: \n");
+    scanf("%i", &mes);
+
+    printf("Ano: \n");
+    scanf("%i", &ano);
+    dataAtual(dia, mes, ano);
+
+
+  return 0;
+}
+int dataAtual(int dia, int mes, int ano){
+    switch(mes){
+        case 1:
+            printf("%i de janeiro de %i", dia, ano);
+            break;
+        case 2:
+             printf("%i de fevereiro de %i", dia, ano);
+            break;
+        case 3:
+             printf("%i de marco de %i", dia, ano);
+            break;
+        case 4:
+             printf("%i de abril de %i", dia, ano);
+            break;
+        case 5:
+             printf("%i de maio de %i", dia, ano);
+            break;
+        case 6: printf("%i de junho de %i", dia, ano);
+            break;
+        case 7:
+             printf("%i de julho de %i", dia, ano);
+            break;
+        case 8:
+            printf("%i de agosto de %i", dia, ano);
+            break;
+        case 9:
+            printf("%i de setembro de %i", dia, ano);
+            break;
+        case 10:
+            printf("%i de outubro de %i", dia, ano);
+            break;
+        case 11:
+            printf("%i de novembro de %i", dia, ano);
+            break;
+        case 12:
+             printf("%i de dezembro de %i", dia, ano);
+            break;
+
+    }
+}

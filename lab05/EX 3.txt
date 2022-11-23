@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*3. Faça uma função para verificar se um número é positivo ou negativo. Sendo que o valor de
+retorno será 1 se positivo, -1 se negativo e 0 se for igual a 0.
+*/
+
+void verifica(int num){
+    printf("Digite um numero para verficar se eh positivo ou negativo: \n");
+    scanf("%d", &num);
+    if (num > 0){
+        printf("1");
+    }else{
+        if(num == 0){
+            printf("0");
+        }else{
+            if(num < 0){
+                printf("-1");
+            }
+        }
+    }
+}
+int main(void)
+{
+    int num;
+    verifica(num);
+
+}
