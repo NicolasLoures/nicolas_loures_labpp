@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+/*21. Crie uma função que receba como parâmetro um valor inteiro e gere como saída n linhas
+com pontos de exclamação, conforme o exemplo abaixo (para n = 5):
+!
+!!
+!!!
+!!!!
+!!!!!*/
+
+int pir(int x);
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    piramide(num);
+    return 0;
+}
+
+int piramide(int x){
+    for(int cont1=1;cont1<=x;cont1++){
+        for(int cont2=1;cont2<=cont1;cont2++){
+            printf("!");
+        }
+        printf("\n");
+    }
+
+}

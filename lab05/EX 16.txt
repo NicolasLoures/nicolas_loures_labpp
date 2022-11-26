@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/*16. Faça uma função chamada desenha_linha. Ele deve desenhar uma linha na tela usando uma
+sequência de símbolos de igual (Ex.: ========). A função recebe por parâmetro quantos
+sinais de igual serão mostrados*/
+
+void desenha_linha(int qtd);
+
+int main()
+{
+    int x;
+    scanf("%d", &x);
+    desenha_linha(x);
+    return 0;
+}
+
+void desenha_linha(int qtd)
+{
+    int y;
+    for (y=1; y<=qtd; y++){
+        printf("=");
+    }
+}

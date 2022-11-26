@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/*18. Faça uma função que receba por parâmetro dois valores inteiros x e z. Calcule e retorne o
+resultado de x
+z para o programa principal. Atenção não utilize nenhuma função pronta de
+exponenciação..*/
+
+int fatorial(int x);
+
+int main(void)
+{
+    int a;
+    scanf("%d", &a);
+    printf("O fatorial do numero digitado eh: %d", fatorial(a));
+
+}
+
+int fatorial (int x){
+    if (x == 0){
+        return 1;
+    }
+    return x*fatorial(x-1);
+}

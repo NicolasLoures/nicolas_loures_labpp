@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+/*20. Escreva uma função para determinar a quantidade de números primos abaixo de N..*/
+
+int primo(int x);
+int main(void)
+{
+    int num,nPrimos =0;
+    scanf("%d",&num);
+    for(int i=2; i<=num; i++){
+        nPrimos += primo(i);
+    }
+    printf("O numeros de primos ate n eh: %d\n",nPrimos);
+
+}
+
+int primo(int x){
+    int stop = x/2;
+    if((x==3)||(x==2)||(x==5)||(x==7)||(x==11)){
+        return 1;
+    }
+    if((x==0)||(x==1)||!(x%3)||!(x%5)||!(x%7)||!(x%11)){
+        return 0;
+    }
+    for(int cont = 3;cont<=stop;cont+=2) {
+        if(!(x%cont)){
+            return 0;
+        }
+    }
+    return 1;
+}

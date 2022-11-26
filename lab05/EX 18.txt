@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+/*18. Faça uma função que receba por parâmetro dois valores inteiros x e z. Calcule e retorne o
+resultado de x
+z para o programa principal. Atenção não utilize nenhuma função pronta de
+exponenciação..*/
+
+int expn(int x, int y);
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d^%d = %d.", a, b, expn(a, b));
+    return 0;
+}
+
+int expn (int x, int y){
+    int numero = 1;
+    for (y; y>0; y--){
+        numero *= x;
+    }
+    return numero;
+}

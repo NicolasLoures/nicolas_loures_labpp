@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+/*17. Faça uma função que receba dois números inteiros positivos por parâmetro e retorne a
+soma dos N números inteiros existentes entre eles.*/
+
+int soma (int num1, int num2);
+
+int main(void) {
+    int x1,x2;
+    scanf("%d %d", &x1, &x2);
+    printf("A soma dos numeros entre %d e %d eh %d", x1, x2, soma(x1, x2));
+
+}
+
+int soma (int num1, int num2) {
+    int soma1 = 0;
+    if (num1>num2){
+        num2 ++;
+        for (num2; num2 < num1; num2++){
+            soma1 += num2;
+        }
+    }
+    else if (num2>num1){
+        num1 ++;
+        for (num1; num1 < num2; num1++){
+            soma1 += num1;
+        }
+    }
+    return soma1;
+}
