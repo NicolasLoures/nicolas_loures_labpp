@@ -1,0 +1,614 @@
+Exercicio 1 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+#include <stdio.h>
+
+/*Vetores - 1. Faça um programa que possua um vetor denominado A que armazene 6 números inteiros.
+O programa deve executar os seguintes passos:
+a) Atribua os seguintes valores a esse vetor: 1, 0, 5, -2, -5, 7.
+b) Armazene em uma variável inteira (simples) a soma entre os valores das posições
+A[0], A[1] e A[5] do vetor e mostre na tela esta soma.
+c) Modifique o vetor na posição 4, atribuindo a esta posição o valor 100.
+d) Mostre na tela cada valor do vetor A, um em cada linha*/
+
+
+int main(void)
+{
+    int A[6] = {1,0, 5, -2, -5, 7};
+    int var;
+    var = A[0] + A[1] + A[5];
+    printf("A soma entre %d, %d  e %d eh %d\n", A[0], A[1], A[5], var);
+
+    A[3] = 100;
+
+    for(int i = 0; i<6; i++){
+        printf("Vetor A = Posicao %d: %d\n", i, A[i]);
+    }
+}
+
+Exercicio 2 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Vetores - 2. Faça um programa que leia um vetor de 8 posições e, em seguida, leia também dois valores
+X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu programa deverá
+escrever a soma dos valores encontrados nas respectivas posições X e Y*/
+
+
+int main(void)
+{
+    float a[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    for (int i = 0; i < 8; i++){
+        printf("Digite o valor da posicao %d: \n", i);
+        scanf("%f", &a[i]);
+    }
+    int x, y;
+    float soma;
+    printf("Digite dois numeros correspondentes as posicoes para receber a soma entre os valores inseridos: \n");
+    scanf("%d %d", &x, &y);
+    soma = x +y;
+    printf("A soma entre %.1f e %.1f eh %.1f", a[x], a[y], soma);
+
+}
+Exercicio 3 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Vetores - 3. Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos na
+ordem inversa.
+*/
+
+
+int main(void)
+{
+    float a[5] = {0, 0, 0, 0, 0, 0};
+    for (int i = 0; i < 6; i++){
+        printf("Digite o valor da posicao %d: \n", i);
+        scanf("%f", &a[i]);
+    }
+    printf("A ordem digitada inversa eh:\n");
+    for (int j = 5; j >= 0; j --){
+        printf("%.1f\n", a[j]);
+
+    }
+
+}
+
+Exercicio 4 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+#include <stdio.h>
+
+/*Vetores - 4. Fazer um programa para ler 5 valores e, em seguida, mostrar a posição onde se encontram
+o maior e o menor valor
+*/
+
+
+#include <stdio.h>
+
+int main(void){
+    int mai, mei, maior, menor, a[5];
+    printf("Digite 5 valores inteiros: \n");
+    for(int i=0;i<5;i++){
+        scanf("%d",&a[i]);
+    }
+
+
+    maior = a[4];
+    menor = a[4];
+    for(int j=0;j<5;j++){
+        if(maior<=a[j]){
+            maior = a[j];
+            mai = j;
+        }
+        else if(menor>= a[j]){
+            menor = a[j];
+            mei = j;
+        }
+    }
+
+    printf("O maior valor esta na posicao %d \nO menor valor esta na posicao %d",mai,mei);
+
+}
+
+Exercicio 5 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Vetores - 5. Faça um vetor de tamanho 50 preenchido com o seguinte valor: (i+5*i)%(i+1), sendo i
+a posição do elemento no vetor. Em seguida imprima o vetor na tela.
+*/
+
+
+#include <stdio.h>
+
+int main(void){
+    int a[50];
+    for (int i = 0; i < 50; i++){
+        a[i] = (i+(5*i)) % (i + 1);
+        printf("Posicao %d - Valor %d\n", i, a[i]);
+    }
+}
+
+Exercicio 6 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Vetores - 6. Leia 10 números inteiros e armazene em um vetor. Em seguida escreva os elementos que
+são primos e suas respectivas posições no vetor.*/
+
+#include <stdio.h>
+int ehPrimo(int x);
+int main(void){
+    int a[10];
+    for (int i=0; i<10; i++){
+        printf("Digite um valor para ser armazenado na posicao %d: \n", i);
+        scanf("%d", &a[i]);
+    }
+    for(int j=0;j<10;j++){
+
+        if(ehPrimo(a[j])==1){
+            printf("%d- %d eh primo\n",j,a[j]);
+        }
+    }
+
+}
+int ehPrimo(int x){
+    int stop = x/2;
+    if((x==3)||(x==2)||(x==5)||(x==7)||(x==11)){
+        return 1;
+    }
+    if((x==0)||(x==1)||!(x%2)||!(x%3)||!(x%5)||!(x%7)||!(x%11)){
+        return 0;
+    }
+    for(int i = 3;i<=stop;i+=2) {
+        if(!(x%i)){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+Exercicio 7 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Vetores - 7. Faça um programa que receba 6 números inteiros e mostre:
+ Os números pares digitados;
+ A soma dos números pares digitados;
+ Os números ímpares digitados;
+ A quantidade de números ímpares digitados;.*/
+
+#include <stdio.h>
+void ParOuImpar(int x);
+int main(void){
+    int a[6];
+    printf("Digite 6 valores para verificar a soma dos pares e quantos são impares\n");
+    for (int i=0; i<6; i++){
+        printf("Valor %d: \n", i+1);
+        scanf("%d", &a[i]);
+    }
+    int par, impar, soma = 0, soma1 = 0;
+    for(int j = 0; j < 6; j++){
+        if (a[j]%2 == 0){
+                printf("%d eh par\n", a[j]);
+            soma = soma + a[j];
+        }else{
+            if(a[j]%2 != 0){
+                printf("%d eh impar\n", a[j]);
+                soma1 = soma1 + 1;
+
+            }
+        }
+
+    }
+    printf("A soma dos valores pares eh %d\nDos 6 valores inseridos %d sao impares", soma, soma1);
+}
+
+Exercicio 8 - Vetores \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Vetores - Exercicio 8. Faça um programa para ler 10 números DIFERENTES a serem armazenados em um vetor. Os
+dados deverão ser armazenados no vetor na ordem que forem sendo lidos, sendo que caso
+o usuário digite um número que já foi digitado anteriormente, o programa deverá pedir para
+ele digitar outro número. Note que cada valor digitado pelo usuário deve ser pesquisado no
+vetor, verificando se ele existe entre os números que já foram fornecidos. Exibir na tela o
+vetor final que foi digitado*/
+
+#include <stdio.h>
+int main(void){
+
+
+    int ent,rep=0,vetor[10];
+    for(int i = 0; i < 10; i++){
+        do{
+
+            scanf("%d", &ent);
+            rep =0;
+            for(int j = 0; j < i; j++){
+                if(vetor[j] == ent){
+                    printf("Numeros repetidos, digite outro numero\n");
+                    rep=1;
+                }
+            }
+            if(!rep)
+                vetor[i] = ent;
+        }while(rep);
+    }
+    printf("Vetor final inserido:");
+    for (int y = 0; y < 10; y++){
+        printf("\nPosicao [%d]: %d", y, vetor[y]);
+    }
+
+}
+
+*********************************************************
+=========================================================
+*********************************************************
+
+Exercicio 1 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+#include <stdio.h>
+
+/*Matrizes - Exercicio 1. Leia uma matriz 4 × 4, conte e escreva quantos valores maiores que 10 ela possui  */
+
+#include <stdio.h>
+int main(void){
+
+
+    int matriz[4][4], soma = 0;
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j <4; j ++){
+            printf("Digite um valor: \n");
+            scanf("%d", &matriz[i][j]);
+        }
+}
+    for(int x = 0; x < 4; x++){
+        for(int y = 0; y < 4; y ++){
+            if(matriz[x][y]>10){
+                soma = soma + 1;
+            }
+        }
+}
+    printf("Foram inseridos %d valores maiores que 10", soma);
+}
+
+
+Exercicio 2 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+#include <stdio.h>
+
+/*Matrizes - Exercicio 2. Declare uma matriz 5 × 5. Preencha com 1 a diagonal principal e com 0 os demais elementos.
+Escreva ao final a matriz obtida.  */
+
+#include <stdio.h>
+int main(void){
+
+
+    int matriz[5][5];
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j <5; j ++){
+            if (i == j){
+                matriz[i][j] = 1;
+            }else{
+                matriz[i][j] = 0;
+            }
+        }
+    }
+    int linha, coluna=0;
+
+    for (linha=0; linha<5; linha++)
+     {
+        for(coluna=0; coluna<5; coluna++)
+            {printf("%d     ", matriz[linha][coluna]);}
+            printf("\n");
+     }
+
+    getchar();
+}
+
+Exercicio 3 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Matrizes - Exercicio 3. Leia uma matriz 4 × 4, imprima a matriz e retorne a localização (linha e a coluna) do maior
+valor  */
+
+#include <stdio.h>
+int main(void){
+
+
+    int matriz[4][4];
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            printf("Insira um valor para a a posicao Linha  %d Coluna %d: \n", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+    int maior = matriz[0][0], mx, my;
+
+    for (int x=0; x<4; x++)
+     {
+        for(int y=0; y<4; y++)
+            if(matriz[x][y] > maior){
+                maior = matriz[x][y];
+                mx = x;
+                my = y;
+        }
+
+     }
+     printf("O maior valor da matriz eh %d esta localizado na linha %d e coluna %d", maior, mx, my);
+
+}
+
+Exercicio 4 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+#include <stdio.h>
+
+/*Matrizes - Exercicio 4. Leia uma matriz 5 × 5. Leia também um valor X. O programa deverá fazer uma busca desse
+valor na matriz e, ao final, escrever a localização (linha e coluna) ou uma mensagem de “não
+encontrado”*/
+
+#include <stdio.h>
+int main(void){
+
+
+    int matriz[5][5], val, mx, my, verif = 0;
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+            printf("Insira um valor para a posicao Linha  %d Coluna %d: \n", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+    printf("Digite um valor para verificar, se existir na matriz, sua localizacao: \n");
+    scanf("%d", &val);
+
+
+
+    for (int x=0; x<5; x++)
+     {
+        for(int y=0; y<5; y++)
+            if(matriz[x][y] == val){
+                mx = x;
+                my = y;
+                verif++;
+                printf("O valor %d foi encontrado na linha %d e coluna %d\n", val, mx, my);
+        }
+
+     }
+     if (!verif){
+        printf("Nao encontrado");
+     }
+
+
+}
+
+
+Exercicio 5 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Matrizes - Exercicio 5. Gerar e imprimir uma matriz de tamanho 10 × 10, onde seus elementos são da forma:
+A[i][j] = 2i + 7j - 2 se i < j;
+A[i][j] = 3i^2 - 1 se i = j;
+A[i][j] = 4i^3 – 5j^2 + 1 se i > j*/
+
+#include <stdio.h>
+int main(void){
+
+
+    int matriz[10][10];
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            if(i < j){
+                matriz[i][j] = (2*i) + (7 * j) - 2;
+            }else{
+                if(i == j){
+                    matriz[i][j] = (3 * pow(i, 2)) - 1;
+                }else{
+                    if(i > j){
+                        matriz[i][j] = (4 * pow(i, 3)) - (5 * pow(j, 2));
+                    }
+
+                }
+
+            }
+
+        }
+    }
+    int linha, coluna=0;
+
+    for (linha=0; linha<10; linha++)
+     {
+        for(coluna=0; coluna<10; coluna++)
+            {printf("%d ", matriz[linha][coluna]);}
+            printf("\n");
+     }
+    }
+
+Exercicio 6 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+
+/*Matrizes - Exercicio 6. Gere matriz 4 × 4 com valores no intervalo [1, 20]. Escreva um programa que transforme a
+matriz gerada numa matriz triangular inferior, ou seja, atribuindo zero a todos os elementos
+acima da diagonal principal. Imprima a matriz original e a matriz transformada.
+*/
+
+
+int main(void){
+    int num,matriz[4] [4];
+    printf("Preencha a matriz com valores no intervalo de 1 a 20: \n");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            do{
+            scanf("%d",&num);
+            }while(num>20 && num<1);
+            matriz[i][j] = num;
+        }
+    }
+
+
+    printf("MATRIZ ORIGINAL:\n");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            printf("%d ",matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+           matriz[i][j] = j>i ? 0 : matriz[i][j];
+        }
+    }
+
+    printf("\nMATRIZ TRIANGULAR INFERIOR:\n");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            printf("%d ",matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
+Exercicio 7 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Matrizes - Exercicio 7. Faça um programa para gerar automaticamente números entre 0 e 99 de uma cartela de
+bingo. Sabendo que cada cartela deverá conter 5 linhas de 5 números, gere estes dados de
+modo a não ter números repetidos dentro das cartelas. O programa deve exibir na tela a
+cartela gerada.
+*/
+
+
+int main(void){
+    srand(time(NULL));
+    int num,cartela[5][5];
+    for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 5; j++){
+                num = rand() % 99 + 0;
+                cartela[i][j] = num;
+            }
+    }
+    int linha, coluna=0;
+    printf("Cartela de Bingo\n");
+    for (linha=0; linha<5; linha++)
+     {
+        for(coluna=0; coluna<5; coluna++)
+            {printf("%d  ", cartela[linha][coluna]);}
+            printf("\n");
+     }
+    }
+
+
+
+Exercicio 8 - Matrizes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Matrizes - Exercicio 8. Faça um programa que leia duas matrizes 2 × 2 com valores reais. Ofereça ao usuário um
+menu de opções:
+a) somar as duas matrizes
+b) subtrair a primeira matriz da segunda
+c) adicionar uma constante às duas matrizes
+d) imprimir as matrizes
+*/
+
+
+
+int main(void) {
+    int cnst =0,matriz1[2][2],matriz2[2] [2],matrizR[2][2];
+    char op;
+    int fim;
+
+    printf("Preencha a matriz 1: \n");
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            scanf("%d",&matriz1[i][j]);
+        }
+    }
+    printf("Preencha a matriz 2: \n");
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            scanf("%d",&matriz2[i][j]);
+        }
+    }
+
+
+        do{
+        printf("---Calculadora de matrizes---\n");
+        printf("a) somar as duas matrizes\n");
+        printf("b) subtrair a primeira pela segunda\n");
+        printf("c) adicionar uma constante as duas matrizes\n");
+        printf("d) imprimir as matrizes\n");
+        printf("Digite a opcao('a' ou 'b' ou 'c'...): ");
+        scanf (" %c",&op);
+
+        switch(op) {
+            case 'a':
+                for(int i=0; i<2;i++){
+                    for(int j=0; j<2;j++){
+                        matrizR[i][j] = matriz1[i][j] + matriz2[i][j];
+                    }
+                }
+            break;
+            case 'b':
+                for(int i=0; i<2;i++){
+                    for(int j=0; j<2;j++){
+                        matrizR[i][j] = matriz1[i][j] - matriz2[i][j];
+                    }
+            }
+            break;
+            case 'c':
+                printf("Digite a constante a ser adicionada: ");
+                scanf("%d", &cnst);
+                for(int i=0; i<2;i++){
+                    for(int j=0; j<2;j++){
+                        matriz1[i][j]+=cnst;
+                        matriz2[i][j]+=cnst;
+                    }
+                }
+            break;
+            case 'd':
+            if(!cnst){
+                printf("Matriz resultado:\n");
+                for(int i=0;i<2;i++){
+                    for(int j=0;j<2;j++){
+                        printf("%d ",matrizR[i][j]);
+                    }
+                    printf("\n");
+                }
+            }
+            printf("Matriz 1:\n");
+            for(int i=0;i<2;i++){
+                    for(int j=0;j<2;j++){
+                        printf("%d ",matriz1[i][j]);
+                    }
+                    printf("\n");
+                }
+            printf("Matriz 2:\n");
+            for(int i=0;i<2;i++){
+                    for(int j=0;j<2;j++){
+                        printf("%d ",matriz2[i][j]);
+                    }
+                    printf("\n");
+                }
+
+            break;
+        }
+
+    printf("Voce quer continuar? (1 para sim e 0 para nao): ");
+    scanf("%d",&fim);
+    }while(fim);
+
+}
+
+
+
+
