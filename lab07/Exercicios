@@ -1,0 +1,450 @@
+Exericio 1 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*1. Faça um programa que leia uma string e a imprima.
+*/
+
+int main()
+{
+    char strg[101];
+    int i, x = 0;
+    printf("Digite algo: \n");
+    fgets(strg,101,stdin);
+ 
+    for(i = 0; strg[i] != '\0'; i++){
+        printf("%c",strg[i]);
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}
+
+Exericio 2 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*2. Faça um programa que conte o número de 1’s que aparecem em uma string. Exemplo:
+“0011001” -> 3
+*/
+
+int main(void)
+{
+    char uns[101];
+    int i, a = 0;
+    printf("Digite uma sequencia de 0's e 1's: \n");
+    scanf("%s",&uns);
+    for(i = 0; uns[i] != '\0'; i++){
+        if(uns[i] == '1'){
+            a++;
+        }
+    }
+    printf("A quantidade de 1's que foram inseridos na sequencia eh: %d\n",a);
+    system("pause");
+
+}
+
+
+Exericio 3 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*3. Faça um programa que receba uma palavra e a imprima de trás-para-frente.*/
+
+int main()
+{
+    char palavra[101];
+    int i, x;
+    printf("Digite uma palavra para recebe-la de tras-para-frente: \n");
+    scanf("%s",palavra);
+    x = strlen(palavra);
+    printf("A palavra '%s' de tras-para-frente eh: \n", palavra);
+    for(i = x; palavra[i] >= 0; i--){
+        printf("%c",palavra[i]);
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}
+
+
+Exericio 4 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*4. Faça um programa que receba uma palavra e calcule quantas vogais (a, e, i, o, u) possui essa
+palavra. Entre com um caractere (vogal ou consoante) e substitua todas as vogais da palavra
+dada por esse caractere.*/
+
+
+int main()
+{
+    char palavra[100], crct;
+    int i, x = 0;
+    printf("Digite uma palavra: \n");
+    scanf("%s",palavra);
+    for(i = 0; palavra[i] != '\0'; i++){
+        if(palavra[i] == 'a' || palavra[i] == 'e' || palavra[i] == 'i' || palavra[i] == 'o' || palavra[i] == 'u'){
+            x++;
+        }
+
+    }
+    printf("Numero de vogais: %d\n",x);
+    printf("Entre com um caractere para substituir todas as vogais pelo que for inserido: \n");
+    fflush(stdin);
+    scanf("%c",&crct);
+    for(i = 0; palavra[i] != '\0'; i++){
+        if(palavra[i] == 'a' || palavra[i] == 'e' || palavra[i] == 'i' || palavra[i] == 'o' || palavra[i] == 'u'){
+            palavra[i] = crct;
+        }
+
+    }
+    for(i = 0; palavra[i] != '\0'; i++){
+        printf("%c",palavra[i]);
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}
+
+
+Exericio 5 - //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*5. Escreva um programa para converter uma cadeia de caracteres de letras maiúsculas em letras
+minúsculas. Dica: some 32 dos caracteres cujo código ASCII está entre 65 e 90.*/
+
+
+int main(void){
+    char converter[50];
+    printf("Digite uma palavra: ");
+    fgets(converter, 49, stdin);
+    for(int i = 0; i <strlen(converter); i++){
+        if(converter[i]>=65&&converter[i]<=90){
+            converter[i]+=32;
+        }
+    }
+    printf("A string minuscula eh: %s",converter);
+}
+
+
+
+Exericio 6 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void)
+{
+    char seq[100], caractere;
+    int i, x = 0;
+    printf("Digite uma sequencia de caracteres minusculos: \n");
+    fgets(seq,100,stdin);
+    for(i = 0; seq[i] != '\0'; i++){
+        if(seq[i] != ' ' && seq[i] >= 97 && seq[i] <= 122){
+            seq[i] = seq[i] - 32;
+        }
+    }
+    printf("Sequencia de caracteres digitados convertida em maiusculo: \n");
+    for(i = 0; seq[i] != '\0'; i++){
+        printf("%c",seq[i]);
+    }
+    printf("\n");
+
+}
+
+
+Exericio 7 - //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*7. Leia um vetor contendo letras de uma frase inclusive os espaços em branco. Retirar os
+espaços em branco do vetor e depois escrever o vetor resultante*/
+
+
+int main(void){
+    char frase[50];
+    printf("Digite uma frase: ");
+    fgets(frase, 49, stdin);
+    for(int i = 0; i < strlen(frase); i++){
+        if(frase[i] == ' '){
+            for(int j=i;j<strlen(frase);j++){
+                frase[j]= frase[j+1];
+            }
+        }
+    }
+    printf("A frase digitada, sem os espacos, eh: %s: ", frase);
+}
+
+
+Exericio 8 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*8. Faça um programa em que troque todas as ocorrências de uma letra L1 pela letra L2 em
+uma string. A string e as letras L1 e L2 devem ser fornecidas pelo usuário*/
+
+int main(void)
+{
+    char frase[100],c1, c2;
+    int i;
+    printf("Digite uma frase: \n");
+    fgets(frase,100,stdin);
+    printf("Digite um caracter presente na frase previamente inserida para ser substituido: \n");
+    scanf("%c",&c1);
+    fflush(stdin);
+    printf("Digite o novo caracter a ser inserido: \n");
+    scanf("%c",&c2);
+    for(i = 0; frase[i] != '\0'; i++){
+        if(frase[i] == c1){
+            frase[i] = c2;
+        }
+    }
+    printf("Frase com caracter substituido: \n");
+    for(i = 0; frase[i] != '\0'; i++){
+        printf("%c",frase[i]);
+    }
+}
+
+
+Exericio 9 - //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*9. Faça um programa que preencha uma matriz de string com os modelos de cinco carros
+(exemplos de modelos: Fusca, Gol, Vectra, etc.). Em seguida, preencha um vetor com o consumo
+desses carros, isto é, quantos quilômetros cada um deles faz com um litro de combustível.
+Calcule e mostre:
+(a) O modelo de carro mais econômico;
+(b) Quantos litros de combustível cada um dos carros cadastrados consome para
+percorrer uma distância de 1.000 quilômetros.*/
+
+
+int main(void){
+    char carros[5][50];
+    int cons[5], menor, econ;
+
+    printf("Digite o nome de cinco carros: ");
+    for(int i=0; i<5; i++){
+        fgets(carros[i], 49, stdin);
+    }
+    printf("\n Agora digite o respectivo consumo(KM/L) de cada carro: \n");
+    for(int i=0; i<5; i++){
+        scanf("%d", &cons[i]);
+    }
+
+    printf("Letra a) \n");
+    menor = cons[0];
+
+    for(int i=0; i<5; i++){
+        if(cons[i] < menor){
+            menor = cons[i];
+            econ = i;
+        }
+    }
+    printf("O carro mais economico eh: %s", carros[econ]);
+
+    printf("Letra b) \n");
+    for(int i=0; i<5; i++){
+        printf("O %s vai consumir %f litros para percorrer 1000 quilometros", carros[i], 1000.0/cons[i]);
+    }
+}
+
+
+Exericio 10 - //////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*10. Ler o nome e o valor de uma determinada mercadoria de uma loja. Sabendo que o desconto
+para pagamento à vista é de 10% sobre o valor total, calcular o valor a ser pago à vista. Escrever
+o nome da mercadoria, o valor total, o valor do desconto e o valor a ser pago à vista.*/
+
+int main(void)
+{
+    float a, b;
+    int i;
+    char mercadoria[100], valor[10];
+
+    printf("Digite o nome de uma mercadoria: \n");
+    fgets(mercadoria, 100, stdin);
+    fflush(stdin);
+
+    printf("Digite o preco da mercadoria inserida: \n");
+    fgets(valor, 10, stdin);
+
+    a = atof(valor);
+    b = a * 0.90;
+
+    printf("Nome: ");
+    for(i = 0; mercadoria[i] != '\n'; i++){
+        printf("%c", mercadoria[i]);
+    }
+    printf("\n-Valor total: R$ %.2f\n",a);
+    printf("-Valor do desconto: R$ %.2f\n", a * 0.10);
+    printf("-Valor a ser pago a vista: R$ %.2f\n",b);
+
+}
+
+
+Exericio 11 - //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*11. Escreva um programa que recebe uma string S e inteiros não-negativos I e J e imprima o
+segmento S[I..J].*/
+
+int main(void)
+{
+    char S[100];
+    int i, a, b, c;
+    printf("Digite uma string: \n");
+    fgets(S,100,stdin);
+    fflush(stdin);
+    do{
+    printf("Digite dois inteiros positivos menor que 40: \n");
+    scanf("%d %d",&a,&b);
+    }while(a < 0 || b < 0);
+    if(a > b){
+        c = a;
+        a = b;
+        b = c;
+    }
+    for(i = a; i <= b; i++){
+        printf("%c",S[i]);
+    }
+}
+
+
+Exericio 12 - //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*12. O código de César é uma das mais simples e conhecidas técnicas de criptografia. É um tipo
+de substituição na qual cada letra do texto substituída por outra, que se apresenta no alfabeto
+abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três posições, ‘A’ seria
+substituído por ‘D’, ‘B’ se tornaria ‘E’, e assim por diante. Implemente um programa que faça
+uso desse Código de César (3 posições), entre com uma string e retorne a string codificada.
+Exemplo:
+String: a ligeira raposa marrom saltou sobre o cachorro cansado
+Nova string: D OLJHLUD UDSRVD PDUURP VDOWRX VREUH R FDFKRUUR FDQVDGR
+*/
+
+int main(void)
+{
+    char S[100];
+    int i, a;
+    printf("Digite uma frase: \n");
+    fgets(S,100,stdin);
+    a = strlen(S);
+    for(i = 0; i <= a; i++){
+        if(S[i] != ' ' && S[i] != '\0' && S[i] != '\n'){
+            printf("%c",S[i] - 29);
+        }else{
+            printf("%c",S[i]);
+        }
+    }
+
+}
+
+
+Exericio 13- //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*13. Faça um programa que, dada uma string, diga se ela é um palíndromo ou não. Lembrando
+que um palíndromo é uma palavra que tenha a propriedade de poder ser lida tanto da direita
+para a esquerda como da esquerda para a direita.
+Exemplo:
+ovo
+arara
+Socorram-me, subi no ônibus em Marrocos
+Anotaram a data da maratona*/
+
+int main()
+{
+    char frase[100];
+    int i, a = 0, j;
+    printf("Escreva uma stirng: ");
+    fgets(frase, 100, stdin);
+    for(i = 0; frase[i] != '\0'; i++){
+        a = i;
+    }
+    j = a - 1;
+    for (i = 0; i < a; i++){
+        if (frase[j] == ' '){
+            j--;
+        }
+        if (frase[i] == ' '){
+            i++;
+        }
+        if(frase[i] != frase[j]){
+            printf("A string iserida nao eh um palindromo\n");
+            return 0;
+        }
+        j--;
+    }
+    printf("A string inserida eh um palindromo\n");
+    system("pause");
+    return 0;
+}
+
+
+Exericio 14 - //////////////////
+
+#include <stdio.h>
+#include <string.h>
+
+/*14. Implemente um programa que leia duas strings, str1 e str2, e um valor inteiro positivo N.
+Concatene não mais que N caracteres da string str2 à string str1 e termine str1 com ‘\0’*/
+
+int main(void)
+{
+    char strg1[100],strg2[100], strg3[100];
+    int i, N;
+
+    printf("Digite uma string: \n");
+    fgets(strg1,100,stdin);
+    fflush(stdin);
+
+    printf("Digite outra string: \n");
+    fgets(strg2,100,stdin);
+    fflush(stdin);
+
+    printf("Digite um inteiro positivo N: \n");
+    scanf("%d",&N);
+
+    for(i = 0; i < N; i++){
+        strg3[i] = strg2[i];
+    }
+    strcat(strg1,strg3);
+    for(i = 0; i != '\0'; i++){
+        printf("%c",strg1[i]);
+    }
+}
+
+Exericio 15 - //////////////////
+
+
+
+Exericio 16 - //////////////////
+
+
+
